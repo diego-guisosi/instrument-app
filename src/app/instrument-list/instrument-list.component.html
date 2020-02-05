@@ -1,0 +1,17 @@
+<h1>Instruments</h1>
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Maturity Date</th>
+      <th>Highest Historical Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let instrument of instruments | async">
+      <td>{{ instrument.symbol }}</td>
+      <td>{{ instrument.maturityDate | date}}</td>
+      <td>Not available</td>
+    </tr>
+  </tbody>
+</table>

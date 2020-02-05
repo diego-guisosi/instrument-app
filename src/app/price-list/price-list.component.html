@@ -1,0 +1,25 @@
+<h1>Historical Prices</h1>
+<div class="container u-full-width">
+  <div class="one row" *ngFor="let price of prices | async">
+    <div class="one column">
+      {{ price.symbol }}
+    </div>
+    <div class="eleven columns">
+      <table class="u-full-width">
+        <thead>
+          <th *ngFor="let serie of price.series">
+            {{ serie.date | date:'yy/MM/dd' }}
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td *ngFor="let serie of price.series">
+              {{ serie.price | currency:'USD':'symbol':'2.2-2' }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
