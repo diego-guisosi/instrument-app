@@ -20,8 +20,8 @@ import { PriceListComponent } from './price-list/price-list.component';
       HttpClientModule,
       RouterModule.forRoot([
         { path: '', component: InstrumentListComponent },
-        { path: 'instrumentos', component: InstrumentListComponent },
-        { path: 'precos', component: PriceListComponent }
+        { path: 'instruments', component: InstrumentListComponent },
+        { path: 'prices', component: PriceListComponent }
       ])
    ],
    providers: [],
