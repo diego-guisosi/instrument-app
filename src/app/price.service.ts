@@ -7,7 +7,7 @@ import { Price } from './price';
 })
 export class PriceService {
 
-  url = 'http://localhost:8080/prices';
+  url = '/assets/prices.json';
 
   constructor(
     private http: HttpClient
