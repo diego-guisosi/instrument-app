@@ -10,7 +10,9 @@ export class InstrumentListComponent implements OnInit {
 
   instruments;
 
-  constructor(private instrumentService: InstrumentService) { }
+  constructor(
+    private instrumentService: InstrumentService
+  ) { }
 
   ngOnInit() {
     this.instruments = this.instrumentService.getAll();
