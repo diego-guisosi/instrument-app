@@ -8,10 +8,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let instrument of instruments | async">
+    <tr *ngFor="let instrument of instruments">
       <td>{{ instrument.symbol }}</td>
       <td>{{ instrument.maturityDate | date}}</td>
-      <td>Not available</td>
+      <td>{{ instrument.highestPrice | currency:'USD':'symbol':'2.2-2'}}</td>
     </tr>
   </tbody>
 </table>
